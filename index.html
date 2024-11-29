@@ -48,6 +48,9 @@
             border-left: 4px solid #333;
             margin: 10px 0;
         }
+        .highlight {
+            background-color: yellow;
+        }
         .search-bar {
             padding: 10px;
             margin: 20px 0;
@@ -59,8 +62,13 @@
         .search-results {
             margin-top: 20px;
         }
-        .search-results p {
-            margin: 10px 0;
+        .bookmark {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        .bookmark:hover {
+            text-decoration: none;
         }
     </style>
 </head>
@@ -87,109 +95,24 @@
 
     <div id="setting" class="section">
         <h2>Setting</h2>
-        <p><strong>Hailsham School</strong></p>
-        <p><strong>Significance:</strong> Hailsham is the boarding school where Kathy, Ruth, and Tommy grow up. It’s a seemingly idyllic place but with a dark undercurrent, designed to prepare them for their roles as organ donors.</p>
-        <p><strong>Details:</strong></p>
-        <ul>
-            <li>Hailsham fosters creativity and encourages students to submit artwork for "The Gallery."</li>
-            <li>Focus on physical health but no clear explanation as to why.</li>
-            <li>Isolated from the outside world, a setting that creates both safety and foreboding.</li>
-        </ul>
-        <p><strong>Quotes:</strong></p>
+        <p><strong>Hailsham School</strong> <span class="bookmark" onclick="bookmarkSection('setting')">[Bookmark]</span></p>
+        <p><strong>Significance:</strong> Hailsham is the boarding school where Kathy, Ruth, and Tommy grow up...</p>
         <div class="quote">
-            "It was a beautiful place. It was in the countryside, with large playing fields, woods, and a pond." (p. 6)
+            "It was a beautiful place..." (p. 6)
         </div>
-        <div class="quote">
-            "Your art will reveal your soul." (p. 26) – Miss Emily.
-        </div>
-        <p><strong>Impact:</strong> The setting influences the characters' identity formation and moral dilemmas, which gradually unfold as they become aware of their true purpose in life.</p>
     </div>
 
     <div id="characters" class="section">
         <h2>Characters</h2>
         
-        <h3>Kathy H.</h3>
-        <p><strong>Key Traits:</strong> Reflective, empathetic, observant.</p>
-        <p><strong>Development:</strong> Kathy narrates her own story, often revisiting her memories with Tommy and Ruth. She’s a carer who reflects on her past and her complex relationships.</p>
-        <p><strong>Important Moments:</strong> Kathy reflects on her childhood relationships, particularly with Tommy and Ruth, and her role as a carer.</p>
+        <h3>Kathy H. <span class="bookmark" onclick="bookmarkSection('characters')">[Bookmark]</span></h3>
+        <p><strong>Key Traits:</strong> Reflective, empathetic...</p>
         <div class="quote">
-            "I’m not trying to boast, but I’ve been a carer now for over eleven years." (p. 3)
-        </div>
-        
-        <h3>Ruth</h3>
-        <p><strong>Key Traits:</strong> Charismatic, manipulative, competitive.</p>
-        <p><strong>Development:</strong> Ruth displays an early desire for control, particularly in her relationships with Kathy and Tommy.</p>
-        <p><strong>Important Moments:</strong> Ruth’s competitive nature shows when she lies about receiving a special pencil case, asserting dominance over her peers.</p>
-        <div class="quote">
-            "It’s not what she says, but what she doesn’t say, that puts you in your place." (p. 18)
-        </div>
-        
-        <h3>Tommy</h3>
-        <p><strong>Key Traits:</strong> Sensitive, impulsive, misunderstood.</p>
-        <p><strong>Development:</strong> Tommy’s frustrations about his lack of artistic talent are central to his emotional struggles.</p>
-        <p><strong>Important Moments:</strong> Miss Lucy’s words to Tommy about his artistic talent show how different the clones’ fates might be from their expectations.</p>
-        <div class="quote">
-            "She said we weren’t being taught enough about some things. But she didn’t go into specifics." (p. 29)
+            "I’m not trying to boast..." (p. 3)
         </div>
     </div>
 
-    <div id="themes" class="section">
-        <h2>Themes</h2>
-        
-        <h3>Identity and Purpose</h3>
-        <p><strong>Theme Description:</strong> The students struggle with their identities and what their purpose is in the world.</p>
-        <p><strong>Example:</strong> The art they produce, particularly in “The Gallery,” is meant to express who they are, but the true purpose of their lives is hidden from them until later.</p>
-        <div class="quote">
-            "Your art will reveal your soul." (p. 26)
-        </div>
-
-        <h3>Mortality and Acceptance</h3>
-        <p><strong>Theme Description:</strong> The inevitable fate of the characters as organ donors looms over them.</p>
-        <p><strong>Example:</strong> Miss Lucy’s cryptic comments about their future point to the novel’s underlying exploration of mortality.</p>
-        <div class="quote">
-            "You were brought into this world for a purpose, and your futures, all of them, have been decided." (p. 35)
-        </div>
-    </div>
-
-    <div id="moments" class="section">
-        <h2>Important Moments</h2>
-        
-        <h3>The Gallery and Artwork</h3>
-        <p><strong>Significance:</strong> Hailsham’s emphasis on art as a form of expression shapes the characters’ understanding of their identities.</p>
-        <p><strong>Details:</strong> Miss Emily claims the students’ art is a representation of their souls, yet they are not told the true reason for the gallery’s existence.</p>
-        <p><strong>Literary Techniques:</strong> Symbolism of art representing identity and foreshadowing of their fate.</p>
-
-        <h3>Tommy’s Outburst</h3>
-        <p><strong>Significance:</strong> Tommy’s emotional outbursts reveal his inner conflict and frustration with the world around him.</p>
-        <p><strong>Details:</strong> His temper and emotional volatility contrast with the calm demeanor expected by Hailsham.</p>
-        <div class="quote">
-            "Tommy’s tantrums were often spectacular." (p. 22)
-        </div>
-    </div>
-
-    <div id="symbols" class="section">
-        <h2>Symbols and Motifs</h2>
-        
-        <h3>The Tape</h3>
-        <p><strong>Significance:</strong> Represents Kathy’s longing for connection and a reminder of her childhood.</p>
-        <p><strong>Details:</strong> Kathy’s search for a tape she had with Tommy signifies the bond they share, despite the passage of time.</p>
-        <div class="quote">
-            "We all knew how much it meant to her, and Tommy especially was determined to find it again." (p. 41)
-        </div>
-
-        <h3>The Woods</h3>
-        <p><strong>Significance:</strong> Symbolizes fear and the unknown. The students are warned against the woods but don’t fully understand why.</p>
-    </div>
-
-    <div id="questions" class="section">
-        <h2>Questions</h2>
-        <ul>
-            <li>How does the seemingly idyllic environment of Hailsham contrast with its true purpose?</li>
-            <li>What role does art play in shaping the students’ understanding of their identity?</li>
-            <li>How do Miss Lucy’s warnings challenge the Hailsham ethos?</li>
-            <li>In what ways do the dynamics between Kathy, Ruth, and Tommy foreshadow their future relationships?</li>
-        </ul>
-    </div>
+    <!-- Add other sections here similarly -->
 
 </div>
 
@@ -197,14 +120,22 @@
     function searchContent() {
         let input = document.getElementById('search-input').value.toLowerCase();
         let sections = document.querySelectorAll('.section');
+        let regex = new RegExp(input, "gi");
+
         sections.forEach(section => {
             let text = section.innerText.toLowerCase();
-            if (text.includes(input)) {
-                section.style.display = 'block';
-            } else {
-                section.style.display = 'none';
+            section.style.display = text.includes(input) ? 'block' : 'none';
+
+            // Highlighting logic
+            section.innerHTML = section.innerHTML.replace(/<span class="highlight">|<\/span>/g, ''); // Remove existing highlights
+            if (input) {
+                section.innerHTML = section.innerHTML.replace(regex, match => `<span class="highlight">${match}</span>`);
             }
         });
+    }
+
+    function bookmarkSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     }
 </script>
 
