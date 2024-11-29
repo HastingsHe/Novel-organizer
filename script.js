@@ -28,10 +28,11 @@ function searchContent() {
     if (!found) {
         document.getElementById('search-results').innerHTML = `<p>No results found for "${input}".</p>`;
     } else {
-        document.getElementById('search-results').innerHTML = ""; // Clear no-results message if results exist
+        document.getElementById('search-results').innerHTML = `<p>Results found for "${input}".</p>`;
     }
 }
 
-function bookmarkSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+function clearSearch() {
+    document.getElementById('search-input').value = "";
+    searchContent();
 }
