@@ -110,6 +110,12 @@
         <div class="quote">
             "I’m not trying to boast..." (p. 3)
         </div>
+        
+        <h3>Tommy</h3>
+        <p><strong>Key Traits:</strong> Sensitive, prone to emotional outbursts...</p>
+        <div class="quote">
+            "Tommy never even tried to pretend he wasn’t upset..." (p. 8)
+        </div>
     </div>
 
     <!-- Add other sections here similarly -->
@@ -119,19 +125,27 @@
 <script>
     function searchContent() {
         let input = document.getElementById('search-input').value.toLowerCase();
-        let sections = document.querySelectorAll('.section');
+        let sections = document.querySelectorAll('.section, .section h3, .section p, .quote');
         let regex = new RegExp(input, "gi");
+        let found = false;
 
         sections.forEach(section => {
-            let text = section.innerText.toLowerCase();
-            section.style.display = text.includes(input) ? 'block' : 'none';
-
-            // Highlighting logic
-            section.innerHTML = section.innerHTML.replace(/<span class="highlight">|<\/span>/g, ''); // Remove existing highlights
-            if (input) {
+            // Remove previous highlights
+            section.innerHTML = section.innerHTML.replace(/<span class="highlight">|<\/span>/g, '');
+            
+            if (input && section.textContent.toLowerCase().includes(input)) {
+                // Highlight search matches
                 section.innerHTML = section.innerHTML.replace(regex, match => `<span class="highlight">${match}</span>`);
+                section.style.display = 'block';
+                found = true;
+            } else {
+                section.style.display = 'none';
             }
         });
+
+        if (!found) {
+            document.querySelectorAll('.section h2').forEach(header => header.style.display = 'none');
+        }
     }
 
     function bookmarkSection(id) {
