@@ -3,116 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novel Organizer: Never Let Me Go</title>
+    <title>Never Let Me Go - Novel Organizer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Never Let Me Go - Novel Organizer</h1>
-        <p>An interactive guide to explore the key elements of *Never Let Me Go* by Kazuo Ishiguro</p>
     </header>
 
-    <!-- Search box and Clear button -->
-    <div id="search-container">
-        <input type="text" id="search-input" placeholder="Search for content...">
-        <button onclick="searchContent()">Search</button>
-        <button onclick="clearSearch()">Clear Search</button>
-    </div>
-    <div id="search-results"></div>
-
-    <!-- Main Content Sections -->
-    <div class="section" id="chapter-summaries">
-        <h2>Chapter Summaries</h2>
-        <div class="chapter">
-            <h3>Chapter 1</h3>
-            <p><strong>Summary:</strong> Kathy H., now a carer, reflects on her past years at Hailsham. The novel opens with Kathy's perspective, showing her admiration for her school and the people who shaped her life. She introduces the concept of "carers" and "donors" but doesn't fully explain their significance yet. This chapter sets up the emotional tone of the story as Kathy begins recalling her memories.</p>
-            <p><strong>Key Information:</strong> Introduction of Hailsham, carer/donor roles, Kathy’s first reflections. (Page 6)</p>
-            <p><strong>Quote:</strong> “Hailsham was a special place... I would look back and remember it with a deep sense of loss” (Page 6).</p>
-        </div>
-        
-        <div class="chapter">
-            <h3>Chapter 2</h3>
-            <p><strong>Summary:</strong> Kathy recalls her time with Ruth and Tommy, two pivotal figures in her life. She reflects on her friendship with Ruth, who often acted superior and controlled their dynamic. Tommy is portrayed as having a volatile temper and struggles to fit in. Kathy's empathy toward him is evident, and she tries to make him feel better.</p>
-            <p><strong>Key Information:</strong> Introduction of Ruth's controlling behavior, Tommy’s temper, Kathy’s sympathetic nature. (Page 12)</p>
-            <p><strong>Quote:</strong> “Tommy was different... his rages were a way to cope with the expectations” (Page 12).</p>
-        </div>
-
-        <div class="chapter">
-            <h3>Chapter 3</h3>
-            <p><strong>Summary:</strong> Miss Lucy, one of the guardians at Hailsham, unintentionally reveals the dark truth about the students' future. She informs Kathy and the other students that their lives are preordained, as they are clones bred for the purpose of organ donation. This revelation is chilling and marks the first of many moments when the students realize their fate.</p>
-            <p><strong>Key Information:</strong> Miss Lucy's revelation about the students' fate. (Page 20)</p>
-            <p><strong>Quote:</strong> “You’ve been told and not told... your lives are set for a purpose, and you must never forget that” (Page 20).</p>
-        </div>
-
-        <div class="chapter">
-            <h3>Chapter 4</h3>
-            <p><strong>Summary:</strong> Kathy begins to explore the complex relationships among her friends. Ruth becomes more controlling, manipulating situations and using Kathy to her advantage. At the same time, Kathy’s growing feelings for Tommy are evident, but Ruth’s interference complicates everything. This chapter introduces the tensions between the three of them, especially around Ruth’s relationship with Tommy.</p>
-            <p><strong>Key Information:</strong> Development of Ruth’s manipulative nature, Kathy’s reflections on their friendship. (Page 28)</p>
-            <p><strong>Quote:</strong> “Ruth always made it seem like she knew more about the world than the rest of us” (Page 28).</p>
-        </div>
-
-        <div class="chapter">
-            <h3>Chapter 5</h3>
-            <p><strong>Summary:</strong> The concept of "deferrals" emerges. Some students, particularly Kathy, hold onto the hope that if two students fall in love, they can apply for a deferral and postpone their fate. This chapter explores the idea of love as an illusion of hope, as the characters grapple with their inevitable future.</p>
-            <p><strong>Key Information:</strong> Introduction of deferrals and Kathy’s idealized views on love. (Page 35)</p>
-            <p><strong>Quote:</strong> “There was a rumour... if two people were truly in love, they could apply for a deferral” (Page 35).</p>
-        </div>
-
-        <div class="chapter">
-            <h3>Chapter 6</h3>
-            <p><strong>Summary:</strong> Kathy reflects on the role of art at Hailsham and its connection to the students' futures. The guardians encourage the students to create art, but the true purpose behind this is revealed to be a means of evaluating the students' souls and determining their value. The chapter explores the ethical implications of this treatment.</p>
-            <p><strong>Key Information:</strong> Art as a form of evaluation, the ethical dimensions of their education. (Page 50)</p>
-            <p><strong>Quote:</strong> “You were supposed to create art... to give something of yourself” (Page 50).</p>
-        </div>
-
-        <div class="chapter">
-            <h3>Chapter 7</h3>
-            <p><strong>Summary:</strong> Kathy, Tommy, and Ruth transition to the Cottages after leaving Hailsham. They confront the reality of their lives and begin to question the meaning of their existence. The complex dynamics of their relationships evolve as they try to navigate their new lives.</p>
-            <p><strong>Key Information:</strong> The transition from Hailsham to the Cottages, facing reality. (Page 72)</p>
-            <p><strong>Quote:</strong> “We were growing up... and yet we were growing up to a purpose we couldn’t even understand” (Page 72).</p>
-        </div>
-
-        <!-- Add more chapters as needed -->
+    <div class="search-section">
+        <input type="text" id="search-box" placeholder="Search for keywords..." />
+        <button id="clear-btn">Clear Search</button>
     </div>
 
-    <div class="section" id="settings">
-        <h2>Setting</h2>
-        <p><strong>Hailsham:</strong> A secluded boarding school that symbolizes both innocence and control. It represents the students' initial ignorance of their true purpose. (Page 3, 5, 9)</p>
-        <p><strong>The Cottages:</strong> A transitional space where the students confront their future and begin to understand the reality of their lives. (Page 98)</p>
-        <p><strong>The Pond:</strong> The pond near Hailsham is a significant setting that symbolizes the characters' desire for freedom, and at times, their futile attempts to escape their predetermined lives. The characters frequently visit the pond, especially in their later years, and it serves as a quiet place of reflection for Kathy. This setting is also tied to Ruth’s desire to make her life appear more meaningful. It is where Kathy recalls an important moment involving the boat, a symbol of their fleeting illusions of freedom. (Page 112, 160)</p>
-        <p><strong>The Open Fields:</strong> Symbolizes freedom and the illusion of escape, especially in contrast to their predetermined lives. (Page 160)</p>
-        <p><strong>The Lunch Queue:</strong> The lunch queue at Hailsham is a mundane but significant ritual that reflects the **orderliness** and **control** imposed on the students. It’s not just a simple act of eating—it’s a representation of the **routine** of their lives, where the students are encouraged to stay in line and follow established rules. The lunch queue is also symbolic of the **lack of agency** the students have over their own lives, a constant reminder of their predetermined future. (Page 25, 40)</p>
-    </div>
+    <div class="sections-container">
+        <!-- Setting Section -->
+        <div class="section" id="settings">
+            <h2>Setting</h2>
+            <div class="setting-detail" data-keywords="hailsham pond cottages lunch queue">
+                <p><strong>Hailsham:</strong> Hailsham is an isolated, idyllic boarding school for children, offering a unique education in art, literature, and humanities. However, as the novel progresses, it becomes clear that the school's primary function is to nurture the students for a singular purpose: to eventually donate their organs. The atmosphere at Hailsham is controlled, and many of the students, especially Kathy, Ruth, and Tommy, slowly come to terms with the disquieting truth of their futures. The setting is symbolic of the way the students' lives are carefully curated. (Page 5, 8)</p>
+            </div>
+            <div class="setting-detail" data-keywords="pond">
+                <p><strong>The Pond:</strong> The pond near Hailsham is a significant symbol throughout the novel, representing a fleeting sense of freedom and escape for the characters. It’s the place where Kathy and Ruth share one of their most vulnerable conversations about their future and the uncertain nature of their relationships. The pond's stillness represents their desire for peace amidst their otherwise chaotic and predetermined lives. (Page 112, 160)</p>
+            </div>
+            <div class="setting-detail" data-keywords="cottages">
+                <p><strong>The Cottages:</strong> After leaving Hailsham, the characters move to the Cottages, an isolated rural area. The setting here provides a glimpse into the outside world, where the characters begin to explore more adult relationships, often marked by uncertainty and confusion. The contrast between the controlled life at Hailsham and the more free-form existence at the Cottages highlights the realization that there is little room for individual choice in their lives. (Page 98, 140)</p>
+            </div>
+            <div class="setting-detail" data-keywords="lunch queue">
+                <p><strong>The Lunch Queue:</strong> The lunch queue at Hailsham serves as a metaphor for the orderly control of their lives. It’s a small but powerful reminder of how their routine is structured by the school’s rules. The characters are always aware of their place in line, both literally and metaphorically, reflecting their subjugation to a system that treats them as less than human. (Page 25, 45)</p>
+            </div>
+        </div>
 
-    <div class="section" id="characters">
-        <h2>Characters</h2>
-        <p><strong>Kathy H.:</strong> The reflective narrator and carer, Kathy often looks back on her memories to make sense of her life. Her growth involves understanding her purpose and confronting painful truths. (Page 10, 45, 89)</p>
-        <p><strong>Tommy:</strong> A sensitive and temperamental character, Tommy is often misunderstood. His artwork becomes a form of expression and resistance. (Page 20, 112)</p>
-        <p><strong>Ruth:</strong> Initially domineering and manipulative, Ruth's character evolves as she faces the consequences of her actions and the impact of her relationships. (Page 33, 99, 140)</p>
-    </div>
+        <!-- Character Section -->
+        <div class="section" id="characters">
+            <h2>Characters</h2>
+            <div class="character-detail" data-keywords="kathy">
+                <p><strong>Kathy H.:</strong> Kathy is the narrator of the novel and reflects on her past at Hailsham and beyond. She is introspective and observant, questioning the meaning of her memories and the role she plays in the world. As a carer, she looks back on her life, reflecting on her relationships with Ruth and Tommy. Kathy is emotionally complex, torn between nostalgia and the realization of her impending fate. Her development is marked by a longing to understand herself and make sense of her relationships, particularly with Tommy and Ruth. (Page 50, 75)</p>
+            </div>
+            <div class="character-detail" data-keywords="ruth">
+                <p><strong>Ruth:</strong> Ruth is a dynamic character who initially appears as manipulative and insecure, but as the novel progresses, her vulnerabilities emerge. Ruth wants to maintain a sense of control, especially over her relationships with Tommy and Kathy. She secretly desires to be loved and accepted but often pushes others away with her actions. Ruth's eventual confession of her deceit to Kathy serves as a critical turning point. (Page 95, 130)</p>
+            </div>
+            <div class="character-detail" data-keywords="tommy">
+                <p><strong>Tommy:</strong> Tommy is sensitive and emotionally raw, often misunderstood by those around him. His temper and frustration are outlets for his confusion about the meaninglessness of his existence. He feels trapped in a world that doesn’t acknowledge his true self, and his relationship with Ruth and Kathy is marked by longing and tension. Tommy’s emotional breakdowns reflect his internal struggle to come to terms with the truth about his purpose. (Page 80, 115)</p>
+            </div>
+            <div class="character-detail" data-keywords="miss lucy">
+                <p><strong>Miss Lucy:</strong> Miss Lucy is one of the teachers at Hailsham who, unlike the others, reveals some of the uncomfortable truths about the students' fate. She cares deeply for the children and becomes a mentor to Kathy, Ruth, and Tommy. However, her outspokenness about their future causes tension, as the school administration seeks to maintain the illusion that the students have some control over their lives. Miss Lucy represents the moral conflict in the novel, pushing against the system that defines the students' fates. (Page 60, 120)</p>
+            </div>
+            <div class="character-detail" data-keywords="miss emily">
+                <p><strong>Miss Emily:</strong> Miss Emily is the headmistress of Hailsham. She is strict and distant, but as the novel progresses, her role in the system becomes clearer. Miss Emily justifies the purpose of Hailsham, explaining that their mission is to prepare the children for their fate by fostering artistic expression. She represents the institutionalized rationale behind the ethically questionable practices at Hailsham. (Page 150, 180)</p>
+            </div>
+        </div>
 
-    <div class="section" id="themes">
-        <h2>Themes</h2>
-        <p><strong>Mortality and Acceptance:</strong> The novel deeply explores the students’ awareness of their impending fate and how they come to terms with it. (Page 45, 121)</p>
-        <p><strong>Identity and Memory:</strong> Kathy’s reflection on her past and the memories of Hailsham reveal the role of memory in shaping identity and understanding one’s purpose. (Page 51, 110)</p>
-        <p><strong>Ethics and Humanity:</strong> The novel questions the ethics of cloning and the treatment of clones as mere organ donors, challenging the notion of personhood and rights. (Page 100)</p>
-    </div>
+        <!-- Theme Section -->
+        <div class="section" id="themes">
+            <h2>Themes</h2>
+            <div class="theme-detail" data-keywords="memory identity">
+                <p><strong>Memory and Identity:</strong> The theme of memory is central to the narrative. Kathy’s reflections on her past shape her sense of identity and understanding of the world. The characters are shaped by their memories, even though they struggle to accept the reality behind them. This theme is highlighted by Kathy’s contradictory feelings of nostalgia and the realization of the bleak truth about their lives. (Page 50, 70)</p>
+            </div>
+            <div class="theme-detail" data-keywords="mortality fate">
+                <p><strong>Mortality and Fate:</strong> One of the most profound themes is the inescapable nature of the students' fate—they are created to donate their organs and ultimately die young. The characters come to terms with this reality in different ways. For Kathy, Tommy, and Ruth, their understanding of mortality becomes intertwined with their quest for meaning in their relationships. Their struggles with this truth reflect the universal human fear of impending death. (Page 100, 170)</p>
+            </div>
+            <div class="theme-detail" data-keywords="ethics of science">
+                <p><strong>Ethics of Science:</strong> The novel questions the ethics of the scientific system that creates clones for organ harvesting. The characters' awareness of their role as organ donors is gradually revealed, raising important moral questions. Miss Lucy’s rebellion against this system and Miss Emily’s justification of it underscore the moral divide in the novel. The characters' lack of choice and control is a tragic commentary on the human cost of scientific progress. (Page 60, 120)</p>
+            </div>
+        </div>
 
-    <div class="section" id="symbols">
-        <h2>Symbols</h2>
-        <p><strong>Kathy’s Cassette Tape:</strong> Represents lost innocence, personal history, and a connection to a past that cannot be reclaimed. (Page 32)</p>
-        <p><strong>The Boat:</strong> Symbolizes the inevitability of the students' fate and their limited capacity for escape or deferral. (Page 210)</p>
-    </div>
+        <!-- Symbols Section -->
+        <div class="section" id="symbols">
+            <h2>Symbols</h2>
+            <div class="symbol-detail" data-keywords="art">
+                <p><strong>Art:</strong> The theme of art is explored through the characters' creations at Hailsham, particularly Kathy, Tommy, and Ruth's artistic expressions. Their works of art are a symbol of their struggle for identity and meaning in a world that limits their choices. Art is a form of self-expression for the students, but it is also used by Hailsham as a way to prove their worth. The characters' relationship with their art reflects their evolving understanding of their fate and their desire to create something that transcends their predetermined roles. (Page 40, 85)</p>
+            </div>
+            <div class="symbol-detail" data-keywords="the tape">
+                <p><strong>The Tape:</strong> The tape that Kathy listens to represents nostalgia and longing. It symbolizes Kathy's deep emotional connection to her past and her attempts to preserve fragments of memories that she knows will eventually fade. The tape is both a literal object and a metaphor for the characters’ memories, which are often distorted by time. (Page 90, 135)</p>
+            </div>
+        </div>
 
-    <div class="section" id="important-moments">
-        <h2>Important Moments</h2>
-        <p><strong>Miss Lucy’s Revelation:</strong> "You were brought into this world for a purpose." (Page 20)</p>
-        <p><strong>The Discovery of the Boat:</strong> The friends confront mortality together and find an illusory sense of freedom. (Page 210)</p>
+        <!-- Important Moments Section -->
+        <div class="section" id="important-moments">
+            <h2>Important Moments</h2>
+            <div class="moment-detail" data-keywords="the secret conversation">
+                <p><strong>The Secret Conversation:</strong> One of the pivotal moments in the novel is the secret conversation Kathy overhears between Ruth and Tommy, where Ruth admits her manipulations and reveals the truth about their relationships. This conversation marks a turning point in Kathy’s understanding of her past and the nature of her bond with Ruth and Tommy. It is an emotionally charged moment that underscores the fragility of their relationships and the inevitable fate that awaits them. (Page 150, 180)</p>
+            </div>
+            <div class="moment-detail" data-keywords="miss lucy speaking out">
+                <p><strong>Miss Lucy Speaking Out:</strong> Miss Lucy’s outburst, where she tells the students about their inevitable fate, is a defining moment in the story. It shatters the illusion of control the students had over their lives and introduces a moral and ethical conflict. Her speech forces the characters to confront the reality of their futures. (Page 60, 110)</p>
+            </div>
+        </div>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Novel Organizer. All rights reserved.</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>
