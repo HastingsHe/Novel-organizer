@@ -1,38 +1,44 @@
-function searchContent() {
-    let input = document.getElementById('search-input').value.toLowerCase();
-    let sections = document.querySelectorAll('.section');
-    let regex = new RegExp(input, "gi");
-    let found = false;
+// JavaScript code to handle search functionality and showing only relevant results
 
-    if (input.trim() === "") {
-        // Show all sections if search box is cleared
-        sections.forEach(section => {
-            section.style.display = 'block';
-            section.innerHTML = section.innerHTML.replace(/<span class="highlight">|<\/span>/g, ''); // Remove all highlights
+document.getElementById("search-box").addEventListener("input", function() {
+    let searchQuery = this.value.toLowerCase().trim();
+
+    if (searchQuery === "") {
+        document.querySelectorAll('.section .setting-detail, .section .character-detail, .section .theme-detail, .section .moment-detail, .section .symbol-detail').forEach(function(item) {
+            item.style.display = 'block';
         });
-        document.getElementById('search-results').innerHTML = "";
         return;
     }
 
-    sections.forEach(section => {
-        let content = section.innerHTML.replace(/<span class="highlight">|<\/span>/g, ''); // Clear previous highlights
-        if (content.toLowerCase().includes(input)) {
-            section.style.display = 'block';
-            section.innerHTML = content.replace(regex, match => `<span class="highlight">${match}</span>`);
-            found = true;
+    let searchKeywords = searchQuery.split(" ");
+
+    document.querySelectorAll('.section .setting-detail, .section .character-detail, .section .theme-detail, .section .moment-detail, .section .symbol-detail').forEach(function(item) {
+        let itemText = item.textContent.toLowerCase();
+        let matched = searchKeywords.every(function(keyword) {
+            return itemText.includes(keyword);
+        });
+
+        if (matched) {
+            item.style.display = 'block';
+            highlightText(item, searchKeywords);
         } else {
-            section.style.display = 'none';
+            item.style.display = 'none';
         }
     });
+});
 
-    if (!found) {
-        document.getElementById('search-results').innerHTML = `<p>No results found for "${input}".</p>`;
-    } else {
-        document.getElementById('search-results').innerHTML = `<p>Results found for "${input}".</p>`;
-    }
-}
+document.getElementById("clear-btn").addEventListener("click", function() {
+    document.getElementById("search-box").value = '';
+    document.querySelectorAll('.section .setting-detail, .section .character-detail, .section .theme-detail, .section .moment-detail, .section .symbol-detail').forEach(function(item) {
+        item.style.display = 'block';
+    });
+});
 
-function clearSearch() {
-    document.getElementById('search-input').value = "";
-    searchContent();
+function highlightText(element, keywords) {
+    let text = element.innerHTML;
+    keywords.forEach(function(keyword) {
+        let regex = new RegExp(`(${keyword})`, "gi");
+        text = text.replace(regex, `<mark>$1</mark>`);
+    });
+    element.innerHTML = text;
 }
