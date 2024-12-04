@@ -53,6 +53,12 @@ body {
   margin-bottom: 10px;
 }
 
+.highlight {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+
 button {
   padding: 8px 15px;
   margin-right: 5px;
