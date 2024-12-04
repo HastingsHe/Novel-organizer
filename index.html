@@ -3,166 +3,105 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Never Let Me Go - Study Organizer</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Never Let Me Go - Novel Study</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="assets/search.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Never Let Me Go - Study Organizer</h1>
-    <p>Explore the key characters, themes, settings, and more from *Never Let Me Go* by Kazuo Ishiguro.</p>
-    <input type="text" id="searchBar" placeholder="Search..." onkeyup="searchContent()">
-  </header>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Navigation</h2>
+      <ul>
+        <li><a href="#setting">Setting</a></li>
+        <li><a href="#characters">Characters</a></li>
+        <li><a href="#themes">Themes</a></li>
+        <li><a href="#moments">Important Moments</a></li>
+        <li><a href="#questions">Questions</a></li>
+        <li><a href="#symbols">Symbols</a></li>
+      </ul>
+      
+      <h2>Search</h2>
+      <input type="text" id="searchInput" placeholder="Search...">
+      <div id="searchResults"></div>
+    </div>
 
-  <nav>
-    <ul>
-      <li><a href="#characters">Characters</a></li>
-      <li><a href="#themes">Themes</a></li>
-      <li><a href="#setting">Setting</a></li>
-      <li><a href="#symbols">Symbols & Motifs</a></li>
-      <li><a href="#reflections">Personal Reflections</a></li>
-    </ul>
-  </nav>
+    <!-- Main Content -->
+    <div class="content">
+      <section id="setting">
+        <h2>Setting</h2>
+        <p><strong>Key Locations:</strong></p>
+        <ul>
+          <li><strong>Hailsham:</strong> The boarding school where Kathy, Tommy, and Ruth grow up. Hailsham represents both a seemingly idyllic setting and a place of repression and control. It highlights the themes of memory and innocence.</li>
+          <li><strong>The Cottages:</strong> After leaving Hailsham, the characters move to a dilapidated farmhouse called The Cottages. This location symbolizes the transition from childhood to adulthood, and it serves as a place where the characters begin to confront their fate.</li>
+        </ul>
+        <p><strong>Key Quotes:</strong></p>
+        <blockquote>"We didn't have a lot of time. Time to figure things out." (Page 233)</blockquote>
+        <p>This quote emphasizes the restricted lives of the clones and the time they are given to understand their existence. The setting of The Cottages is crucial to this realization.</p>
+      </section>
 
-  <main>
-    <section id="characters">
-      <h2>Characters</h2>
-      <div class="card" data-search="Kathy H.">
-          <!-- Kathy H. -->
-        <div class="profile">
-            <h3>Kathy H.</h3>
-            <p><strong>Key Traits:</strong> Reflective, caring, and loyal. Kathy serves as the narrator, and her introspective nature shapes the tone of the novel. She is emotionally burdened by her role as a caretaker, making her an unreliable yet empathetic narrator.</p>
-            <p><strong>Relationships:</strong> Kathy's relationships with Tommy and Ruth are central to the narrative. She experiences deep emotional conflict, especially with Ruth, who she views both as a friend and a rival.</p>
-            <p><strong>Important Moments:</strong> Kathy’s reflection on her past and her relationship with Tommy and Ruth, particularly the emotional climax when she realizes the truth about their lives.</p>
-            <div class="quote">
-                <p><strong>Quote:</strong> “I keep thinking about Hailsham, and how it was a place where all of us were destined for one purpose.”</p>
-                <p><em>Page: 52</em></p>
-            </div>
-        </div>
+      <section id="characters">
+        <h2>Characters</h2>
+        <p><strong>Kathy H.</strong> - The narrator of the novel. She is a reflective and compassionate character who navigates the complexities of memory, loss, and identity.</p>
+        <ul>
+          <li><strong>Key Traits:</strong> Empathetic, introspective, caring</li>
+          <li><strong>Important Quote:</strong> "I suppose it’s because I’ve been a carer for so long now. It feels like I’ve been caring for Tommy and Ruth my whole life." (Page 24)</li>
+        </ul>
+        <p><strong>Tommy</strong> - A boy who is often angry and misunderstood but shows depth as he matures. His relationship with Kathy and Ruth explores themes of love and betrayal.</p>
+        <ul>
+          <li><strong>Key Traits:</strong> Emotional, passionate, misunderstood</li>
+          <li><strong>Important Quote:</strong> "I never really believed in the idea of the 'soulmate,' but I know now that I did." (Page 192)</li>
+        </ul>
+        <p><strong>Ruth</strong> - A complex character who struggles with her sense of worth and desire for validation. She plays a pivotal role in Kathy and Tommy’s relationship.</p>
+        <ul>
+          <li><strong>Key Traits:</strong> Manipulative, insecure, ambitious</li>
+          <li><strong>Important Quote:</strong> "You never really understood, did you? That it’s not about love. It’s about getting through it." (Page 242)</li>
+        </ul>
+      </section>
 
-        <!-- Tommy -->
-        <div class="profile">
-            <h3>Tommy</h3>
-            <p><strong>Key Traits:</strong> Impulsive, emotional, and deeply affected by the system he’s born into. Tommy struggles to find peace with his fate, and his emotional outbursts highlight the frustrations of the characters.</p>
-            <p><strong>Relationships:</strong> Tommy’s complicated relationships with Kathy and Ruth are marked by a sense of unfulfilled desire and confusion.</p>
-            <p><strong>Important Moments:</strong> Tommy’s outbursts and his eventual acceptance of his fate. One pivotal moment is his rage at the notion that their lives are meant to serve others.</p>
-            <div class="quote">
-                <p><strong>Quote:</strong> “What’s the point? It’s all decided, isn’t it?”</p>
-                <p><em>Page: 92</em></p>
-            </div>
-        </div>
+      <section id="themes">
+        <h2>Themes</h2>
+        <p><strong>Memory:</strong> The novel examines the reliability and importance of memory, particularly through Kathy’s reflections. The characters’ memories shape their understanding of their lives.</p>
+        <p><strong>Identity:</strong> The characters struggle with understanding who they are in a world where their fates are predetermined. The question of "What makes us human?" is central to the story.</p>
+        <p><strong>Ethics of Science:</strong> The novel poses ethical questions about cloning and the use of clones for organ donation, drawing attention to societal attitudes towards human life.</p>
+        <p><strong>Mortality:</strong> The inevitability of death is a constant theme. The characters come to realize that they live with a limited purpose, and they must face their mortality head-on.</p>
+        <ul>
+          <li><strong>Key Quote:</strong> "The problem, as I see it, is that we only ever really think about death when it’s right in front of us." (Page 150)</li>
+        </ul>
+      </section>
 
-        <!-- Ruth -->
-        <div class="profile">
-            <h3>Ruth</h3>
-            <p><strong>Key Traits:</strong> Ambitious, manipulative, and complex. Ruth plays a pivotal role in Kathy and Tommy's lives, and her desire for control often leads to tension. Ruth’s actions reveal her internal struggles with her purpose and identity.</p>
-            <p><strong>Relationships:</strong> Ruth’s relationships are marked by jealousy and manipulation. She has a complicated bond with Kathy and Tommy, particularly with her romantic involvement with Tommy.</p>
-            <p><strong>Important Moments:</strong> Ruth's actions at the end of the novel, when she reflects on her past mistakes, mark the emotional climax of her character arc.</p>
-            <div class="quote">
-                <p><strong>Quote:</strong> “I thought it would be better that way. That was my reason.”</p>
-                <p><em>Page: 245</em></p>
-            </div>
-        </div>
+      <section id="moments">
+        <h2>Important Moments</h2>
+        <p><strong>Moment 1: Kathy’s Reflection on the "Donors" Program</strong></p>
+        <p>This turning point highlights Kathy’s realization of the fate that awaits all clones, not just her friends, but everyone in their society. The theme of mortality becomes undeniable.</p>
+        <ul>
+          <li><strong>Quote:</strong> "We didn’t know how to fight it, but at least we knew what it was." (Page 263)</li>
+        </ul>
+        <p><strong>Moment 2: Ruth's Confession to Kathy and Tommy</strong></p>
+        <p>Ruth’s confession about her deceit and manipulation is a pivotal moment in the novel. It exposes the emotional complexities of their relationships.</p>
+        <ul>
+          <li><strong>Quote:</strong> "I’m sorry, Tommy. I wish I had known. I wish I could have told you. But I was too scared." (Page 245)</li>
+        </ul>
+      </section>
 
-        <!-- Miss Emily -->
-        <div class="profile">
-            <h3>Miss Emily</h3>
-            <p><strong>Key Traits:</strong> Stern, authoritative, and deeply invested in maintaining Hailsham's mission. Miss Emily serves as a figure of power and control, though her motivations are more complex than they initially appear.</p>
-            <p><strong>Relationships:</strong> Miss Emily’s relationship with the students is one of distance and authority. She represents the institution that enforces the system that governs their lives.</p>
-            <p><strong>Important Moments:</strong> Miss Emily’s final speech to Kathy and the others, revealing the true purpose of Hailsham and her disillusionment with it, marks a turning point in the novel.</p>
-            <div class="quote">
-                <p><strong>Quote:</strong> “We gave you a better life, we gave you some beauty.”</p>
-                <p><em>Page: 202</em></p>
-            </div>
-        </div>
+      <section id="questions">
+        <h2>Questions</h2>
+        <ul>
+          <li>What does it mean to "live a meaningful life" in the context of the clones’ existence?</li>
+          <li>How does Kathy’s role as a carer affect her understanding of love and sacrifice?</li>
+          <li>What ethical questions are raised by the practice of cloning, and how does the novel make us confront them?</li>
+        </ul>
+      </section>
 
-        <!-- Miss Lucy -->
-        <div class="profile">
-            <h3>Miss Lucy</h3>
-            <p><strong>Key Traits:</strong> Direct, passionate, and slightly rebellious. Miss Lucy contrasts with the other guardians at Hailsham due to her blunt honesty about the students’ purpose, which leads to her eventual dismissal.</p>
-            <p><strong>Relationships:</strong> Miss Lucy is seen as a maternal figure, especially to Kathy, Tommy, and Ruth. Her frustration with the system and her attempt to break through the illusion of the students' lives make her a crucial character.</p>
-            <p><strong>Important Moments:</strong> Miss Lucy’s outburst about the students’ future and the way she tries to awaken them to the truth is a pivotal moment in the story.</p>
-            <div class="quote">
-                <p><strong>Quote:</strong> “You have to understand that you are special, you’re not just like other children.”</p>
-                <p><em>Page: 79</em></p>
-            </div>
-        </div>
-
-        <!-- Madame -->
-        <div class="profile">
-            <h3>Madame</h3>
-            <p><strong>Key Traits:</strong> Cold, distant, and enigmatic. Madame runs the art gallery at Hailsham and is involved in the students' evaluation of their artistic works. She represents the emotional distance that the guardians maintain from the students, and she serves as a symbol of the institutionalized nature of their existence.</p>
-            <p><strong>Relationships:</strong> Madame is both an observer and an enforcer of the system that governs the students. She has a personal connection to the children, though it is unclear until later in the novel.</p>
-            <p><strong>Important Moments:</strong> Madame’s emotional reaction to the students' artwork and the revelation of her personal involvement with their lives are key turning points in the novel.</p>
-            <div class="quote">
-                <p><strong>Quote:</strong> “We’ve given you a life, but it’s a life that will never be free.”</p>
-                <p><em>Page: 150</em></p>
-            </div>
-        </div>
-
-        <!-- Miss Geraldine -->
-        <div class="profile">
-            <h3>Miss Geraldine</h3>
-            <p><strong>Key Traits:</strong> Kind, caring, and nurturing. Miss Geraldine is one of the more sympathetic guardians at Hailsham, and she provides emotional support for the students, particularly Ruth.</p>
-            <p><strong>Relationships:</strong> Miss Geraldine’s relationship with the students is one of warmth, and she is seen as a more approachable figure compared to other guardians like Miss Emily or Miss Lucy.</p>
-            <p><strong>Important Moments:</strong> Miss Geraldine's interactions with the students represent the emotional complexity of their relationships with the guardians.</p>
-            <div class="quote">
-                <p><strong>Quote:</strong> “You mustn’t forget that you are special, that you matter.”</p>
-                <p><em>Page: 45</em></p>
-            </div>
-        </div>
-  <section id="themes">
-                <h2 class="collapsible-header">Themes</h2>
-                <div class="collapsible-content">
-                    <h3>Memory</h3>
-                    <p>The theme of memory is central to the novel. The characters constantly look back at their past, trying to make sense of their lives and their purpose. Memory allows Kathy to both protect herself and attempt to rewrite her personal history.</p>
-                    <h3>Identity</h3>
-                    <p>The question of identity is explored through the characters' awareness of their purpose and the existential dilemma it creates. Kathy, Tommy, and Ruth all struggle with understanding who they are beyond their roles as organ donors.</p>
-                    <h3>Mortality</h3>
-                    <p>The inevitability of death looms over the characters. Their mortality is predetermined, and this creates a sense of tragic futility in their lives. The novel explores how they come to terms with their limited time.</p>
-                    <div class="questions">
-                        <p><strong>Question:</strong> How do the characters’ memories influence their decisions and relationships?</p>
-                        <p><strong>Question:</strong> Is it possible to truly understand and accept one's fate in a world with such limited freedom?</p>
-                    </div>
-                </div>
-            </section>
-
-            <section id="important-moments">
-                <h2 class="collapsible-header">Important Moments</h2>
-                <div class="collapsible-content">
-                    <ul>
-                        <li><strong>The Reveal of Their Purpose:</strong> When Kathy and her friends learn the true reason for their existence. This moment of revelation marks the end of their childhood innocence.</li>
-                        <li><strong>The Boat Trip:</strong> A moment of false hope and desire for escape, representing the characters’ yearning for freedom and their eventual realization of the futility of escape.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="symbols">
-                <h2 class="collapsible-header">Symbols and Motifs</h2>
-                <div class="collapsible-content">
-                    <h3>The Boat</h3>
-                    <p>Represents both freedom and the unattainable. The boat trip represents the characters’ desire to escape the predetermined lives they have been given, yet it ultimately proves to be a futile pursuit.</p>
-                    <h3>The Artworks</h3>
-                    <p>The art that the students create at Hailsham is used as a measure of their worth, symbolizing their inner lives and potential, which are ultimately ignored by the outside world. The art represents their attempt to assert their humanity.</p>
-                </div>
-            </section>
-
-            <section id="questions">
-                <h2 class="collapsible-header">Open Questions</h2>
-                <div class="collapsible-content">
-                    <ul>
-                        <li><strong>What is the significance of the title *Never Let Me Go*?</strong></li>
-                        <li><strong>Can we ever truly accept the reality of our own mortality?</strong></li>
-                        <li><strong>How do the characters’ memories influence their understanding of themselves?</strong></li>
-                    </ul>
-                </div>
-            </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 Never Let Me Go Project - All rights reserved.</p>
-  </footer>
-
-  <script src="scripts.js"></script>
+      <section id="symbols">
+        <h2>Symbols and Motifs</h2>
+        <p><strong>The Tape:</strong> The tape is a recurring symbol representing the characters' emotional connections. Kathy’s obsession with recording her memories parallels her need to hold onto her past.</p>
+        <p><strong>The Boat:</strong> The boat symbolizes freedom and escape. It is a recurring image in the characters’ attempts to break free from their predetermined fate.</p>
+        <ul>
+          <li><strong>Quote:</strong> "The boat was a symbol of escape. A chance to leave everything behind and go somewhere better." (Page 192)</li>
+        </ul>
+      </section>
+    </div>
+  </div>
 </body>
 </html>
