@@ -1,24 +1,44 @@
-document.getElementById('searchInput').addEventListener('input', function() {
-  const query = this.value.toLowerCase();
-  const sections = document.querySelectorAll('.content section');
-  let results = [];
+// Wait for the DOM to load before executing the script
+document.addEventListener("DOMContentLoaded", function() {
+  const searchInput = document.getElementById("searchInput");
+  const searchResults = document.getElementById("searchResults");
 
-  sections.forEach(section => {
-    const sectionText = section.textContent.toLowerCase();
-    const sectionTitle = section.querySelector('h2').textContent.toLowerCase();
+  searchInput.addEventListener("input", function() {
+    const query = searchInput.value.toLowerCase();
+    const sections = document.querySelectorAll(".content section");
 
-    if (sectionText.includes(query) || sectionTitle.includes(query)) {
-      results.push(section);
-      section.style.display = 'block';
-    } else {
-      section.style.display = 'none';
+    // Hide search results if input is empty
+    searchResults.innerHTML = '';
+
+    if (query.trim() !== "") {
+      let matches = [];
+
+      // Loop through each section and check for a match
+      sections.forEach(section => {
+        const sectionTitle = section.querySelector("h2").textContent.toLowerCase();
+        const sectionContent = section.textContent.toLowerCase();
+
+        if (sectionTitle.includes(query) || sectionContent.includes(query)) {
+          matches.push(section);
+        }
+      });
+
+      // If matches found, highlight them and display results
+      if (matches.length > 0) {
+        matches.forEach(section => {
+          section.style.backgroundColor = "#f0f8ff"; // Light blue background for matches
+        });
+        searchResults.innerHTML = `${matches.length} match(es) found.`;
+      } else {
+        searchResults.innerHTML = "No matches found.";
+      }
+    }
+
+    // If the search query is empty, remove highlights
+    if (query.trim() === "") {
+      sections.forEach(section => {
+        section.style.backgroundColor = "";
+      });
     }
   });
-
-  const resultDisplay = document.getElementById('searchResults');
-  if (results.length === 0) {
-    resultDisplay.innerHTML = '<p>No results found.</p>';
-  } else {
-    resultDisplay.innerHTML = `<p>Found ${results.length} result(s).</p>`;
-  }
 });
