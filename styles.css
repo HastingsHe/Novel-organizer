@@ -115,6 +115,8 @@ ul li {
     padding: 5px 0;
 }
 
+
+
 ul li strong {
     color: #34495e;
 }
@@ -161,3 +163,42 @@ footer {
     text-align: center;
     padding: 10px 0;
 }
+
+/* Existing styles remain the same */
+
+/* Additional Section Styles */
+h3 {
+    font-size: 1.4em;
+    margin-top: 1em;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul li strong {
+    font-weight: bold;
+}
+
+.quote {
+    background-color: #ecf0f1;
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 5px solid #2980b9;
+}
+
+.questions {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-top: 10px;
+    border-left: 5px solid #e74c3c;
+}
+
+
+/* Style for highlighted search terms */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+
