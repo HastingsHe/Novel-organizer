@@ -1,26 +1,16 @@
-// Collapsible Functionality
-document.querySelectorAll('.collapsible-header').forEach(item => {
-    item.addEventListener('click', () => {
-        let content = item.nextElementSibling;
-        if (content.style.display === 'block') {
-            content.style.display = 'none';
-        } else {
-            content.style.display = 'block';
-        }
-    });
-});
+// Function to search content based on user input
+function searchContent() {
+  const query = document.getElementById('searchBar').value.toLowerCase();
+  const cards = document.querySelectorAll('.card');
 
-// Search Bar Functionality
-document.getElementById('search').addEventListener('input', function() {
-    let searchText = this.value.toLowerCase();
-    let sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        let headerText = section.querySelector('h2').innerText.toLowerCase();
-        let contentText = section.querySelector('.collapsible-content').innerText.toLowerCase();
-        if (headerText.includes(searchText) || contentText.includes(searchText)) {
-            section.style.display = 'block';
-        } else {
-            section.style.display = 'none';
-        }
-    });
-});
+  cards.forEach(card => {
+    const cardContent = card.getAttribute('data-search').toLowerCase();
+    
+    // Show or hide card based on whether it matches the search query
+    if (cardContent.includes(query)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
