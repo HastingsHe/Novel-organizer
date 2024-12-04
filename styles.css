@@ -53,9 +53,21 @@ body {
   margin-bottom: 10px;
 }
 
+/* Highlight the searched text */
 .highlight {
   background-color: yellow;
   font-weight: bold;
+}
+
+/* Basic styling for the page */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+#searchResults {
+  margin-top: 10px;
+  color: #ff6347;
 }
 
 
