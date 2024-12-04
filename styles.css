@@ -106,3 +106,28 @@ strong {
     margin-left: 0;
   }
 }
+
+/* Additional styles for search functionality */
+#searchResults {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#searchInput {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.content section {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.content section h2 {
+  margin-top: 0;
+}
