@@ -43,14 +43,46 @@ body {
   text-decoration: underline;
 }
 
+/* Style the search section */
 #searchInput {
   width: 100%;
-  padding: 10px;
-  margin-top: 20px;
-  border: none;
-  border-radius: 5px;
-  box-sizing: border-box;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
+
+button {
+  padding: 8px 15px;
+  margin-right: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#searchResults {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.content section {
+  padding: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.content section h2 {
+  margin-top: 0;
+}
+
 
 /* Content styling */
 .content {
