@@ -1,99 +1,72 @@
-/* Basic styling for layout */
+/* General styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
 }
 
-/* Header styling */
-header {
-    background-color: #4CAF50;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 2em;
-    margin-bottom: 20px;
+.container {
+  display: flex;
 }
 
-/* Search box section styling */
-.search-section {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+/* Sidebar Styling */
+.sidebar {
+  background-color: #333;
+  color: white;
+  width: 250px;
+  padding: 20px;
 }
 
-.search-section input[type="text"] {
-    width: 300px;
-    padding: 10px;
-    margin-right: 10px;
-    font-size: 1em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.sidebar h2 {
+  text-align: center;
 }
 
-.search-section button {
-    padding: 10px 20px;
-    font-size: 1em;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
+.sidebar ul {
+  list-style: none;
+  padding: 0;
 }
 
-.search-section button:hover {
-    background-color: #45a049;
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-/* Section container styling */
-.sections-container {
-    margin: 0 20px;
+.sidebar ul li a:hover {
+  text-decoration: underline;
 }
 
-/* Styling for individual sections (Setting, Characters, etc.) */
-.section {
-    margin-bottom: 30px;
+/* Search Input and Buttons */
+#searchInput {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
-.section h2 {
-    color: #4CAF50;
-    font-size: 1.5em;
-    margin-bottom: 10px;
+button {
+  padding: 8px 15px;
+  margin-right: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 4px;
 }
 
-/* General styling for each detail section */
-.setting-detail, .character-detail, .theme-detail, .symbol-detail, .moment-detail {
-    background-color: #fff;
-    padding: 15px;
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    display: block;  /* Default to display */
+button:hover {
+  background-color: #45a049;
 }
 
-/* Highlighted search term */
+/* Highlighted text */
 .highlight {
-    background-color: yellow;
-    font-weight: bold;
+  background-color: yellow;
+  font-weight: bold;
 }
 
-/* Responsive design: Adjustments for small screens */
-@media (max-width: 600px) {
-    .search-section input[type="text"] {
-        width: 200px;
-    }
-
-    .search-section button {
-        padding: 8px 16px;
-    }
-
-    .section h2 {
-        font-size: 1.2em;
-    }
-
-    .setting-detail, .character-detail, .theme-detail, .symbol-detail, .moment-detail {
-        padding: 12px;
-    }
+/* Main content styling */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
 }
