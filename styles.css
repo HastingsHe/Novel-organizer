@@ -1,183 +1,99 @@
-/* General styling */
+/* Basic styling for layout */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
+/* Header styling */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
 
-/* Sidebar styling */
-.sidebar {
-  background-color: #333;
-  color: white;
-  width: 250px;
-  padding: 20px;
+/* Search box section styling */
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.sidebar h2 {
-  text-align: center;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin: 15px 0;
-}
-
-.sidebar ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.sidebar ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Style the search section */
-#searchInput {
-  width: 100%;
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-/* Highlight the searched text */
-.highlight {
-  background-color: yellow;
-  font-weight: bold;
-}
-
-/* Basic styling for the page */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-}
-
-#searchResults {
-  margin-top: 10px;
-  color: #ff6347;
-}
-
-
-button {
-  padding: 8px 15px;
-  margin-right: 5px;
-  border: none;
-  background-color: #4CAF50;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-button:hover {
-  background-color: #45a049;
-}
-
-#searchResults {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-.content section {
-  padding: 15px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #ddd;
-}
-
-.content section h2 {
-  margin-top: 0;
-}
-
-
-/* Content styling */
-.content {
-  margin-left: 20px;
-  padding: 20px;
-  flex-grow: 1;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  color: #333;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-ul li {
-  margin: 10px 0;
-}
-
-blockquote {
-  background-color: #f9f9f9;
-  border-left: 5px solid #333;
-  padding: 10px;
-  margin: 15px 0;
-}
-
-strong {
-  font-weight: bold;
-}
-
-/* Styling for active section in navigation */
-.sidebar ul li a.active {
-  font-weight: bold;
-  color: #FFD700;
-}
-
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
+.search-section input[type="text"] {
+    width: 300px;
     padding: 10px;
-  }
-
-  .content {
-    margin-left: 0;
-  }
+    margin-right: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-/* Additional styles for search functionality */
-#searchResults {
-  margin-top: 10px;
-  font-weight: bold;
+.search-section button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
 }
 
-#searchInput {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 15px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+.search-section button:hover {
+    background-color: #45a049;
 }
 
-.content section {
-  padding: 15px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+/* Section container styling */
+.sections-container {
+    margin: 0 20px;
 }
 
-.content section h2 {
-  margin-top: 0;
+/* Styling for individual sections (Setting, Characters, etc.) */
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    color: #4CAF50;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* General styling for each detail section */
+.setting-detail, .character-detail, .theme-detail, .symbol-detail, .moment-detail {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: block;  /* Default to display */
+}
+
+/* Highlighted search term */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Responsive design: Adjustments for small screens */
+@media (max-width: 600px) {
+    .search-section input[type="text"] {
+        width: 200px;
+    }
+
+    .search-section button {
+        padding: 8px 16px;
+    }
+
+    .section h2 {
+        font-size: 1.2em;
+    }
+
+    .setting-detail, .character-detail, .theme-detail, .symbol-detail, .moment-detail {
+        padding: 12px;
+    }
 }
