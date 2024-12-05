@@ -5,37 +5,34 @@ document.addEventListener("DOMContentLoaded", function() {
   const searchResults = document.getElementById("searchResults");
   const sections = document.querySelectorAll(".content section");
 
-  // Function to perform the search
-  function performSearch() {
-    const query = searchInput.value.toLowerCase();
-    searchResults.innerHTML = ""; // Clear previous results
+  function searchContent() {
+        let input = document.getElementById('search-input').value.toLowerCase();
+        let sections = document.querySelectorAll('.section, .section h3, .section p, .quote');
+        let regex = new RegExp(input, "gi");
+        let found = false;
 
-    if (query.trim() === "") {
-      searchResults.innerHTML = "Please enter a search query.";
-      return;
+        sections.forEach(section => {
+            // Remove previous highlights
+            section.innerHTML = section.innerHTML.replace(/<span class="highlight">|<\/span>/g, '');
+            
+            if (input && section.textContent.toLowerCase().includes(input)) {
+                // Highlight search matches
+                section.innerHTML = section.innerHTML.replace(regex, match => `<span class="highlight">${match}</span>`);
+                section.style.display = 'block';
+                found = true;
+            } else {
+                section.style.display = 'none';
+            }
+        });
+
+        if (!found) {
+            document.querySelectorAll('.section h2').forEach(header => header.style.display = 'none');
+        }
     }
 
-    let matches = [];
-    
-    // Loop through each section to check if it matches the query
-    sections.forEach(section => {
-      const sectionTitle = section.querySelector("h2").textContent.toLowerCase();
-      const sectionContent = section.textContent.toLowerCase();
-
-      if (sectionTitle.includes(query) || sectionContent.includes(query)) {
-        matches.push(section);
-        section.style.backgroundColor = "#f0f8ff"; // Highlight matching section
-      } else {
-        section.style.backgroundColor = ""; // Reset background color if no match
-      }
-    });
-
-    if (matches.length > 0) {
-      searchResults.innerHTML = `${matches.length} match(es) found.`;
-    } else {
-      searchResults.innerHTML = "No matches found.";
+    function bookmarkSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
     }
-  }
 // Function to highlight the keyword in the content
 function highlightText(keyword) {
   // Reset the previous highlights by removing the highlight class
