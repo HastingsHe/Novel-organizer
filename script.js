@@ -1,36 +1,33 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const searchInput = document.getElementById("searchInput");
+document.addEventListener("DOMContentLoaded", function() {
   const searchButton = document.getElementById("searchButton");
   const clearSearchButton = document.getElementById("clearSearchButton");
+  const searchInput = document.getElementById("searchInput");
+  const articles = document.querySelectorAll(".section-content article");
 
+  // Function to perform search and filter articles based on query
   function performSearch() {
-    const query = searchInput.value.toLowerCase();
-    const sections = document.querySelectorAll(".content section");
-
-    sections.forEach(section => {
-      const text = section.textContent.toLowerCase();
-      if (text.includes(query)) {
-        section.style.display = "block";
-        highlightText(section, query);
+    const query = searchInput.value.trim().toLowerCase();
+    articles.forEach(article => {
+      // Show article if query is empty or if article text includes the query
+      if (query === "" || article.textContent.toLowerCase().includes(query)) {
+        article.style.display = "block";
       } else {
-        section.style.display = "none";
+        article.style.display = "none";
       }
     });
   }
 
-  function highlightText(container, query) {
-    const regex = new RegExp(`(${query})`, "gi");
-    container.innerHTML = container.innerHTML.replace(/<span class="highlight">|<\/span>/g, "");
-    container.innerHTML = container.innerHTML.replace(regex, '<span class="highlight">$1</span>');
-  }
-
   searchButton.addEventListener("click", performSearch);
 
-  clearSearchButton.addEventListener("click", () => {
+  clearSearchButton.addEventListener("click", function() {
     searchInput.value = "";
-    document.querySelectorAll(".content section").forEach(section => {
-      section.style.display = "block";
-      section.innerHTML = section.innerHTML.replace(/<span class="highlight">|<\/span>/g, "");
-    });
+    performSearch();
+  });
+
+  // Enable search on pressing the "Enter" key in the search input
+  searchInput.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      performSearch();
+    }
   });
 });
