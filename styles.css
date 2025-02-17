@@ -206,6 +206,10 @@ body {
     left: 50%;
     margin-left: -3px;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 @media screen and (max-width: 600px) {
     .container {
