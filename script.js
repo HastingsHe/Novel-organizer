@@ -56,3 +56,19 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const lazyImages = document.querySelectorAll("img.lazy");
+
+  function lazyLoad() {
+    lazyImages.forEach(image => {
+      if (image.getBoundingClientRect().top < window.innerHeight) {
+        image.src = image.dataset.src;
+        image.classList.remove("lazy");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", lazyLoad);
+  lazyLoad(); // Check images on page load
+});
